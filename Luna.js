@@ -3927,6 +3927,25 @@ case 'pakeko': {
 }
 break
 
+case 'open':
+case 'buka': {
+	if (!isOwner) return reply(mess.owner)
+    if (!m.isGroup) return reply(mess.group)
+    luna.groupSettingUpdate(m.chat, 'not_announcement')
+    reply('Grup berhasil dibuka')
+}
+break
+
+case 'close':
+case 'tutup': {
+	if (!isOwner) return reply(mess.owner)
+    if (!m.isGroup) return reply(mess.group)
+    luna.groupSettingUpdate(m.chat, 'announcement')
+    reply('Grup berhasil ditutup')
+}
+break;
+		
+
 case 'mlstalk':
 case 'cekml':
 case 'stalkml': {

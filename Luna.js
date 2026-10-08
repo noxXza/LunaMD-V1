@@ -3293,8 +3293,8 @@ ${errorMessage}`
 }
 break
 
-case "sc"
-case "getsc"
+case "sc":
+case "getsc":
 case "script": {
 
 const foto = fs.readFileSync("./media/Luna.jpg")
